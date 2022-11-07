@@ -2,15 +2,11 @@ import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'styles/GlobalStyle';
 import { colors } from 'styles/theme';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Films from './pages/Films';
-import Charakters from './pages/Charakters';
-import Navigation from './components/Navigation';
-import Title from './components/Title';
+import Logo from './components/Logo';
+import Layout from 'templates/Layout';
 
 const Wrapper = styled.div`
-  background-color: ${({ theme }) => theme.lightBlack};
-  color: ${({ theme }) => theme.lightGray};
+  position: relative;
 `;
 
 export const App = () => {
@@ -18,13 +14,9 @@ export const App = () => {
     <Router>
       <ThemeProvider theme={colors}>
         <GlobalStyle />
-        <Wrapper>
-          <Title />
-          <Navigation />
-          <Home />
-          <Films />
-          <Charakters />
-        </Wrapper>
+        <Layout>
+          <Wrapper>{/* <Logo /> */}</Wrapper>
+        </Layout>
       </ThemeProvider>
     </Router>
   );

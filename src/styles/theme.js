@@ -3,7 +3,7 @@ export const colors = {
   midiumBlack: '#202020',
   black: '#000000',
   lightGray: '#D9D9D9',
-  gray: '#D6D6D6',
+  gray: '#a1a1a1',
   darkGray: '#333533',
   lightYellow: '#FFEE32',
   yellow: '#F5CB5C',
@@ -14,4 +14,10 @@ export const colors = {
   liaghtGreen: '#80B918',
   green: '#55A630',
   darkGreen: '#2B9348',
+
+  font: '#D9D9D9',
+  bacgraund: '#353535',
+  borderNav: '#DDB703',
+  borderShadowNav: '#767676',
+  fontLogo: '#DDB703',
 };
