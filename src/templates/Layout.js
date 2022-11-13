@@ -12,15 +12,11 @@ export const WrapperStyle = styled.div`
   background-color: ${({ theme }) => theme.BasicBacgraund};
 `;
 
-const WrapperChildren = styled.div`
-  position: relative;
-`;
-
 const Layout = ({ children }) => {
   return (
     <WrapperStyle>
       <Navigation />
-      <WrapperChildren>{children}</WrapperChildren>
+      {children}
     </WrapperStyle>
   );
 };

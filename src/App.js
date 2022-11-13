@@ -3,6 +3,10 @@ import { GlobalStyle } from 'styles/GlobalStyle';
 import { colors } from 'styles/theme';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from 'templates/Layout';
+import Home from 'pages/Home';
+import Films from 'pages/Films';
+import Charakters from 'pages/Charakters';
+import Planets from 'pages/Planets';
 
 export const App = () => {
   return (
@@ -11,10 +15,10 @@ export const App = () => {
         <GlobalStyle />
         <Layout>
           <Routes>
-            <Route path='/' />
-            <Route path='/films' />
-            <Route path='/charakters' />
-            <Route path='/planets' />
+            <Route path='/' element={<Home />} />
+            <Route path='/films' element={<Films />} />
+            <Route path='/charakters' element={<Charakters />} />
+            <Route path='/planets' element={<Planets />} />
           </Routes>
         </Layout>
       </ThemeProvider>
