@@ -15,9 +15,16 @@ export const colors = {
   green: '#55A630',
   darkGreen: '#2B9348',
 
-  font: '#D9D9D9',
-  bacgraund: '#353535',
-  borderNav: '#DDB703',
-  borderShadowNav: '#767676',
-  fontLogo: '#DDB703',
+  LogoFont: '#DDB703',
+  LogoBorderBottom: '#DDB703',
+
+  BasicFont: '#D9D9D9',
+  BasicBacgraund: '#353535',
+
+  NavLinkFont: '#D9D9D9',
+  NavFontActive: '#DDB703',
+  NavBacgraund: '#353535',
+  NavBorder: '#DDB703',
+  NavBorderShadow: '#ffd50064',
+  NavHover: '#DDB703',
 };

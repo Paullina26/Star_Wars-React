@@ -6,14 +6,14 @@ const WrapperStyle = styled.div`
 `;
 
 const LogoTitle = styled.h1`
-  color: ${({ theme }) => theme.fontLogo};
+  color: ${({ theme }) => theme.LogoFont};
   /* padding: 10px;
   margin: 20px; */
   margin: 10px auto;
   text-align: center;
   font-size: 30px;
   font-weight: bold;
-  border-bottom: 1px solid ${({ theme }) => theme.borderNav};
+  border-bottom: 1px solid ${({ theme }) => theme.LogoBorderBottom};
 `;
 
 export const Logo = () => {

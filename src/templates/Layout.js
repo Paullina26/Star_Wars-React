@@ -9,14 +9,18 @@ export const WrapperStyle = styled.div`
   padding: 0;
   display: grid;
   grid-template-columns: 200px 1fr;
-  background-color: ${({ theme }) => theme.lightGrey};
+  background-color: ${({ theme }) => theme.BasicBacgraund};
+`;
+
+const WrapperChildren = styled.div`
+  position: relative;
 `;
 
 const Layout = ({ children }) => {
   return (
     <WrapperStyle>
       <Navigation />
-      {children}
+      <WrapperChildren>{children}</WrapperChildren>
     </WrapperStyle>
   );
 };

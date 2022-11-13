@@ -8,11 +8,11 @@ const WrapperStyle = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: ${({ theme }) => theme.bacgraund};
-  border-top: 2px solid ${({ theme }) => theme.borderNav};
-  border-right: 2px solid ${({ theme }) => theme.borderNav};
-  border-bottom: 2px solid ${({ theme }) => theme.borderNav};
-  box-shadow: 1px 1px 5px 1px ${({ theme }) => theme.borderShadowNav};
+  background-color: ${({ theme }) => theme.NavBacgraund};
+  border-top: 2px solid ${({ theme }) => theme.NavBorder};
+  border-right: 2px solid ${({ theme }) => theme.NavBorder};
+  border-bottom: 2px solid ${({ theme }) => theme.NavBorder};
+  box-shadow: 1px 1px 5px 1px ${({ theme }) => theme.NavBorderShadow};
   border-radius: 0px 10px 10px 0px;
   margin-right: 25px;
 `;
@@ -22,7 +22,7 @@ const StyledLink = styled(NavLink)`
   font-weight: 500;
   text-decoration: none;
   position: relative;
-  color: ${({ theme }) => theme.font};
+  color: ${({ theme }) => theme.NavLinkFont};
   margin: 15px auto 15px 20px;
   font-size: 20px;
 
@@ -36,17 +36,17 @@ const StyledLink = styled(NavLink)`
       top: 50%;
       right: 20px;
       transform: translateY(-50%);
-      background-color: ${({ theme }) => theme.fontLogo};
+      background-color: ${({ theme }) => theme.NavFontActive};
       border-radius: 4px 0px 0px 4px;
     }
     &:hover::after {
       width: 30%;
-      transition: width 0.5s;
+      transition: width 0.3s linear;
     }
   }
   &:hover {
-    color: ${({ theme }) => theme.fontLogo};
-    transition: color 0.5s;
+    color: ${({ theme }) => theme.NavHover};
+    transition: color 0.3s 0.3s linear;
   }
 `;
 
@@ -54,10 +54,12 @@ export const Navigation = () => {
   return (
     <WrapperStyle>
       <Logo />
-      <StyledLink>Home</StyledLink>
-      <StyledLink>Films</StyledLink>
-      <StyledLink>Charakters</StyledLink>
-      <StyledLink>Planets</StyledLink>
+      <StyledLink to='/' end>
+        Home
+      </StyledLink>
+      <StyledLink to='/films'>Films</StyledLink>
+      <StyledLink to='/charakters'>Charakters</StyledLink>
+      <StyledLink to='/planets'>Planets</StyledLink>
     </WrapperStyle>
   );
 };
