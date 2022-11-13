@@ -3,7 +3,7 @@ export const colors = {
   midiumBlack: '#202020',
   black: '#000000',
   lightGray: '#D9D9D9',
-  gray: '#D6D6D6',
+  gray: '#a1a1a1',
   darkGray: '#333533',
   lightYellow: '#FFEE32',
   yellow: '#F5CB5C',
@@ -14,4 +14,29 @@ export const colors = {
   liaghtGreen: '#80B918',
   green: '#55A630',
   darkGreen: '#2B9348',
+
+  LogoFont: '#DDB703',
+  LogoBorderBottom: '#DDB703',
+
+  WrapperBorder: '#DDB703',
+  WrapperBacgraund: '#353535',
+  WrapperBorderShadow: '#ddb9037e',
+
+  BasicFont: '#D9D9D9',
+  BasicBacgraund: '#353535',
+
+  NavLinkFont: '#D9D9D9',
+  NavFontActive: '#DDB703',
+  NavBacgraund: '#353535',
+  NavBorder: '#f3cc0684',
+  NavBorderShadow: '#aa8f0742',
+  NavHover: '#DDB703',
+
+  ButtonFont: '#D9D9D9',
+  ButtonBorder: '#f3cc0684',
+  ButtonBacgraund: '#353535',
+  ButtonBorderShadow: '#aa8f0742',
+  ButtonBorderHover: '#DDB703',
+  ButtonBacgraundHover: '#353535',
+  ButtonBorderShadowHover: '#ddb9037e',
 };

@@ -1,15 +1,10 @@
-import styled from 'styled-components';
-
-const WrapperStyle = styled.div`
-  background-color: ${({ theme }) => theme.darkYellow};
-  color: ${({ theme }) => theme.lightGray};
-  height: 200px;
-  width: 200px;
-`;
+import { WrapperStyle } from 'styles/WrapperStyles.style';
+import Slider from 'components/Slider';
 
 export const Charakters = () => {
   return (
     <WrapperStyle>
+      <Slider />
       <p>Charakters</p>
     </WrapperStyle>
   );

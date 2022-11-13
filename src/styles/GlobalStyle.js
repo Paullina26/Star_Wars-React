@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+
+@import url('https://fonts.googleapis.com/css2? family= Signika:wght@300;400;500;700 & display=swap');
+
   html {
     box-sizing: border-box;
   }
@@ -12,11 +15,12 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Montserrat', sans-serif;
-    /* overflow-y: hidden; */
+    font-family: 'Signika', sans-serif;
+    position: relative;
+    background-color: ${({ theme }) => theme.bacgraund};
   }
 
   a, button {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Signika', sans-serif;
   }
 `;

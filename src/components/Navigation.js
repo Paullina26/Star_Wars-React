@@ -1,19 +1,16 @@
-import styled from 'styled-components';
-
-const WrapperStyle = styled.div`
-  background-color: ${({ theme }) => theme.green};
-  color: ${({ theme }) => theme.lightGray};
-  height: 200px;
-  width: 200px;
-`;
+import Logo from './Logo';
+import { StyledLink, WrapperStyle } from 'styles/Navigation.style';
 
 export const Navigation = () => {
   return (
     <WrapperStyle>
-      <p>Home</p>
-      <p>Films</p>
-      <p>Charakters</p>
-      <p>Planets</p>
+      <Logo />
+      <StyledLink to='/' end>
+        Home
+      </StyledLink>
+      <StyledLink to='/films'>Films</StyledLink>
+      <StyledLink to='/charakters'>Charakters</StyledLink>
+      <StyledLink to='/planets'>Planets</StyledLink>
     </WrapperStyle>
   );
 };
