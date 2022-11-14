@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Signika', sans-serif;
     position: relative;
-    background-color: ${({ theme }) => theme.bacgraund};
+    background-color: ${({ theme }) => theme.BasicBacgraund};
   }
 
   a, button {

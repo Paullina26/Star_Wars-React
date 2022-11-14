@@ -28,8 +28,8 @@ export const colors = {
   NavLinkFont: '#D9D9D9',
   NavFontActive: '#DDB703',
   NavBacgraund: '#353535',
-  NavBorder: '#f3cc0684',
-  NavBorderShadow: '#aa8f0742',
+  NavBorder: '#DDB703',
+  NavBorderShadow: '#7e6900',
   NavHover: '#DDB703',
 
   ButtonFont: '#D9D9D9',

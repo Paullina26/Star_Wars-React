@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const WrapperStyle = styled.div`
-  /* height: 47px; */
+  width: 100%;
   text-align: center;
   justify-content: center;
 `;
@@ -13,7 +13,7 @@ export const Button = styled.button`
   box-shadow: 1px 1px 5px 1px ${({ theme }) => theme.ButtonBorderShadow};
   border-radius: 10px;
   display: inline-block;
-  margin: auto 35px;
+  margin: 0px 35px 20px 35px;
   color: ${({ theme }) => theme.BasicFont};
   font-size: 20px;
   background-color: ${({ theme }) => theme.ButtonBacgraund};
