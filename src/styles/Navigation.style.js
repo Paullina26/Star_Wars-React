@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 export const WrapperStyle = styled.nav`
   position: fixed;
   width: 200px;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

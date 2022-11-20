@@ -17,7 +17,7 @@ export const Counter = styled.button`
   display: inline-block;
   color: ${({ theme }) => theme.BasicFont};
   font-size: 20px;
-  background-color: ${({ theme }) => theme.ButtonBacgraund};
+  background-color: ${({ theme }) => theme.GlassBacgraund};
 `;
 
 export const Pagination = () => {
