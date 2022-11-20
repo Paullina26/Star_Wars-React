@@ -18,25 +18,18 @@ export const colors = {
   LogoFont: '#DDB703',
   LogoBorderBottom: '#DDB703',
 
-  WrapperBorder: '#DDB703',
-  WrapperBacgraund: '#353535',
-  WrapperBorderShadow: '#ddb9037e',
-
   BasicFont: '#D9D9D9',
-  BasicBacgraund: '#353535',
+
+  GlassBacgraund: 'rgba(10, 10, 10, 0.65)',
+  GlassShadow: 'rgba(2, 4, 24, 1)',
+  GlassBorder: 'rgba(255, 255, 255, 0.09)',
 
   NavLinkFont: '#D9D9D9',
-  NavFontActive: '#DDB703',
-  NavBacgraund: '#353535',
-  NavBorder: '#DDB703',
-  NavBorderShadow: '#7e6900',
+  NavFontActive: 'rgb(221, 183, 3)',
   NavHover: '#DDB703',
 
-  ButtonFont: '#D9D9D9',
   ButtonBorder: '#f3cc0684',
-  ButtonBacgraund: '#353535',
   ButtonBorderShadow: '#aa8f0742',
   ButtonBorderHover: '#DDB703',
-  ButtonBacgraundHover: '#353535',
   ButtonBorderShadowHover: '#ddb9037e',
 };

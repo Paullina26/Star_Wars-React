@@ -2,16 +2,17 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const WrapperStyle = styled.nav`
-  width: 100%;
+  position: fixed;
+  width: 200px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: ${({ theme }) => theme.NavBacgraund};
-  border-top: 2px solid ${({ theme }) => theme.NavBorder};
-  border-right: 2px solid ${({ theme }) => theme.NavBorder};
-  border-bottom: 2px solid ${({ theme }) => theme.NavBorder};
-  box-shadow: 1px 1px 5px 1px ${({ theme }) => theme.NavBorderShadow};
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: ${({ theme }) => theme.GlassBacgraund};
+  border-right: 2px solid ${({ theme }) => theme.GlassBorder};
+  box-shadow: 0px 8px 32px ${({ theme }) => theme.GlassShadow};
   border-radius: 0px 10px 10px 0px;
   margin-right: 25px;
 `;
@@ -21,7 +22,7 @@ export const StyledLink = styled(NavLink)`
   font-weight: 500;
   text-decoration: none;
   position: relative;
-  color: ${({ theme }) => theme.NavLinkFont};
+  color: ${({ theme }) => theme.BasicFont};
   margin: 15px auto 15px 20px;
   font-size: 20px;
 

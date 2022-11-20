@@ -1,8 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
+import img from 'assets/Picture/galaxyBlue.jpg';
 
 export const GlobalStyle = createGlobalStyle`
-
-@import url('https://fonts.googleapis.com/css2? family= Signika:wght@300;400;500;700 & display=swap');
 
   html {
     box-sizing: border-box;
@@ -17,7 +16,12 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Signika', sans-serif;
     position: relative;
-    background-color: ${({ theme }) => theme.BasicBacgraund};
+    /* background-color: ${({ theme }) => theme.BasicBacgraund}; */
+    background-image: url(${img});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    background-attachment: fixed;
   }
 
   a, button {

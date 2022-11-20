@@ -6,8 +6,7 @@ export const WrapperStyle = styled.div`
   height: 100vh;
   padding: 0;
   display: grid;
-  grid-template-columns: 200px 1fr;
-  background-color: ${({ theme }) => theme.BasicBacgraund};
+  /* grid-template-columns: 200px 1fr; */
 `;
 
 const Layout = ({ children }) => {

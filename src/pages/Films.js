@@ -4,6 +4,7 @@ import Card from 'components/Card';
 import { WrapperCard } from 'components/Card';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+
 export const Films = () => {
   // const [films, setFilms] = useState([])
   // // const params = useParams();
