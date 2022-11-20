@@ -5,11 +5,13 @@ const WrapperStyle = styled.div`
 `;
 
 const LogoTitle = styled.h1`
+  font-variant: small-caps;
+  padding-bottom: 40px;
   color: ${({ theme }) => theme.LogoFont};
   margin: 10px auto;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bold;
-  border-bottom: 1px solid ${({ theme }) => theme.LogoBorderBottom};
+  /* border-bottom: 1px solid ${({ theme }) => theme.LogoBorderBottom}; */
 `;
 
 export const Logo = () => {

@@ -1,10 +1,10 @@
 import { WrapperStyle } from 'styles/WrapperStyles.style';
-import Slider from 'components/Slider';
+import Pagination from 'components/Pagination';
 
 export const Charakters = () => {
   return (
     <WrapperStyle>
-      <Slider />
+      <Pagination />
       <p>Charakters</p>
     </WrapperStyle>
   );
