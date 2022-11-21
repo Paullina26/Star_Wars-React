@@ -6,15 +6,20 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 export const Films = () => {
-  // const [films, setFilms] = useState([])
-  // // const params = useParams();
+  const FILMS_URL = 'https://swapi.dev/api/films/';
+  const [films, setFilms] = useState([]);
+  // const params = useParams();
 
-  // useEffect(() => {
-  //   console.log('teworze sie');
-  //   fetch => () => {
-  //     setFilms(data)
-  //   }
-  // }, []);
+  useEffect(() => {
+    console.log('teworze sie');
+    fetch(FILMS_URL)
+      .then(response => response.json())
+      .then(data => {
+        console.log(FILMS_URL);
+        console.log(data.results);
+      });
+    console.log('git');
+  });
 
   return (
     <WrapperStyle>
@@ -23,9 +28,6 @@ export const Films = () => {
         <Link href='/link-pojedynczego-elementu/1'>
           <Card />
         </Link>
-        <Card />
-        <Card />
-        <Card />
         <Card />
         <Card />
         <Card />

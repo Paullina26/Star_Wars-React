@@ -11,7 +11,7 @@ export const WrapperCard = styled.div`
 `;
 
 const CardStyle = styled.div`
-  width: 240px;
+  width: 270px;
   height: 400px;
   margin: 0px 15px 30px;
   backdrop-filter: blur(6px);
@@ -36,7 +36,6 @@ const Picture = styled.div`
   border: 2px solid ${({ theme }) => theme.GlassBorder};
   box-shadow: 1px 1px 5px 1px ${({ theme }) => theme.GlassShadow};
   border-radius: 10px 10px 10px 10px;
-  text-align: center;
 `;
 
 export const Card = () => {
