@@ -1,48 +1,33 @@
 import { useParams } from 'react-router-dom';
-import styled from 'styled-components';
 import { Button } from './Button';
+import { CardStyle, Title, Picture } from 'styles/Card.style';
 
-export const WrapperCard = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-`;
+import ImgEpisode1 from '../assets/covers_films/episode_1.jpg';
+import ImgEpisode2 from '../assets/covers_films/episode_2.jpg';
+import ImgEpisode3 from '../assets/covers_films/episode_3.jpg';
+import ImgEpisode4 from '../assets/covers_films/episode_4.jpg';
+import ImgEpisode5 from '../assets/covers_films/episode_5.jpg';
+import ImgEpisode6 from '../assets/covers_films/episode_6.jpg';
 
-const CardStyle = styled.div`
-  width: 270px;
-  height: 400px;
-  margin: 0px 15px 30px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  background: ${({ theme }) => theme.GlassBacgraund};
-  border: 2px solid ${({ theme }) => theme.GlassBorder};
-  box-shadow: 0px 8px 32px ${({ theme }) => theme.GlassShadow};
-  border-radius: 10px 10px 10px 10px;
-  text-align: center;
-`;
+const episodeImg = [ImgEpisode1, ImgEpisode2, ImgEpisode3, ImgEpisode4, ImgEpisode5, ImgEpisode6];
 
-const Title = styled.h4`
-  font-size: 20px;
-  margin: 10px;
-  font-weight: 400;
-`;
+export const checkingImage = (arrayImage, arrayAPI, element, params) => {
+  const image = arrayImage.find(img => img[params.first] === arrayAPI[params.second]);
 
-const Picture = styled.div`
-  width: 200px;
-  height: 260px;
-  margin: 15px auto;
-  border: 2px solid ${({ theme }) => theme.GlassBorder};
-  box-shadow: 1px 1px 5px 1px ${({ theme }) => theme.GlassShadow};
-  border-radius: 10px 10px 10px 10px;
-`;
+  if (image) {
+    element.setAttribute('src', image.imgPath);
+  } else {
+    element.setAttribute('src', 'img/noPicture.jpg');
+  }
+};
 
-export const Card = () => {
+export const Card = props => {
   return (
     <CardStyle>
-      <Title>Tytuł/Imie/Nazwa</Title>
-      <Picture>Obrazek</Picture>
+      <Title>{props.data.title}</Title>
+      <Picture>
+        <img src={episodeImg[props.data.episode_id - 1]} />
+      </Picture>
       <Button>Show More</Button>
     </CardStyle>
   );
