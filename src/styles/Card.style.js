@@ -31,8 +31,8 @@ export const Picture = styled.div`
   margin: 15px auto;
 
   img {
-    width: 220px;
-    height: 280px;
+    width: 210px;
+    height: 300px;
     border: 2px solid ${({ theme }) => theme.GlassBorder};
     box-shadow: 1px 1px 5px 1px ${({ theme }) => theme.GlassShadow};
     border-radius: 10px 10px 10px 10px;
