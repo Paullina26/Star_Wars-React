@@ -4,6 +4,14 @@ import ImgEpisode3 from '../assets/covers_films/episode_3.jpg';
 import ImgEpisode4 from '../assets/covers_films/episode_4.jpg';
 import ImgEpisode5 from '../assets/covers_films/episode_5.jpg';
 import ImgEpisode6 from '../assets/covers_films/episode_6.jpg';
+import CharacterR2D2 from '../assets/people/r2d2.jpeg';
+import CharacterDaethVader from '../assets/people/DaethVader.jpg';
+import CharacterLukeSkywalker from '../assets/people/LukeSkywalker.jpeg';
+import CharacterC3PO from '../assets/people/C3PO.jpg';
+import CharacterLeiaOrgana from '../assets/people/LeiaOrgana.jpg';
+import CharacterOwenLars from '../assets/people/OwenLars.jpg';
+import CharacterBeruWhitesunlars from '../assets/people/BeruWhitesunlars.jpg';
+import CharacterObiWanKenobi from '../assets/people/Obi-WanKenobi.jpg';
 
 export const imgMoveCovers = [
   {
@@ -35,34 +43,34 @@ export const imgMoveCovers = [
 export const imgPepole = [
   {
     name: 'R2-D2',
-    imgPath: 'assets/people/r2d2.jpeg',
+    imgPath: CharacterR2D2,
   },
   {
     name: 'Darth Vader',
-    imgPath: 'assets/people/DaethVader.jpg',
+    imgPath: CharacterDaethVader,
   },
   {
     name: 'Luke Skywalker',
-    imgPath: 'assets/people/LukeSkywalker.jpeg',
+    imgPath: CharacterLukeSkywalker,
   },
   {
     name: 'C-3PO',
-    imimgPathg: 'assets/people/C3PO.jpg',
+    imimgPathg: CharacterC3PO,
   },
   {
     name: 'Leia Organa',
-    imgPath: 'assets/people/LeiaOrgana.jpg',
+    imgPath: CharacterLeiaOrgana,
   },
   {
     name: 'Owen Lars',
-    imgPath: 'assets/people/OwenLars.jpg',
+    imgPath: CharacterOwenLars,
   },
   {
     name: 'Beru Whitesun lars',
-    imgPath: 'assets/people/BeruWhitesunlars.jpg',
+    imgPath: CharacterBeruWhitesunlars,
   },
   {
     name: 'Obi-Wan Kenobi',
-    imgPath: 'assets/people/Obi-WanKenobi.jpg',
+    imgPath: CharacterObiWanKenobi,
   },
 ];
