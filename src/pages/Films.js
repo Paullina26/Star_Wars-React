@@ -14,18 +14,12 @@ export const Films = () => {
         setFilms(data.results);
       });
   }, []);
-  console.log(films);
 
   const filmsRender = films.map(film => <Card key={film.episode_id} data={film} />);
 
   return (
     <WrapperStyle>
-      <WrapperCard>
-        {filmsRender}
-        {/* <Link href='/link-pojedynczego-elementu/1'>
-          <Card />
-        </Link> */}
-      </WrapperCard>
+      <WrapperCard>{filmsRender}</WrapperCard>
     </WrapperStyle>
   );
 };

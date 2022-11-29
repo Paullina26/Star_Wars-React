@@ -38,3 +38,18 @@ export const Picture = styled.div`
     border-radius: 10px 10px 10px 10px;
   }
 `;
+
+export const WrapperInformation = styled.h4`
+  font-size: 15px;
+  margin: 0px auto;
+  width: 700px;
+  height: 450px;
+  font-weight: 200;
+  background: ${({ theme }) => theme.GlassBacgraund};
+  border: 2px solid ${({ theme }) => theme.GlassBorder};
+  box-shadow: 0px 8px 32px ${({ theme }) => theme.GlassShadow};
+  border-radius: 10px 10px 10px 10px;
+  p {
+    margin: 20px;
+  }
+`;
