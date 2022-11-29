@@ -1,7 +1,6 @@
 import { WrapperStyle } from 'styles/WrapperStyles.style';
 import Card from 'components/Card';
 import { WrapperCard } from 'styles/Card.style';
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 export const Films = () => {
