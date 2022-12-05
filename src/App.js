@@ -7,7 +7,7 @@ import Home from 'pages/Home';
 import Films from 'pages/Films';
 import Charakters from 'pages/Charakters';
 import Planets from 'pages/Planets';
-import SingleFilms from 'pages/SingleFilms';
+import SingleFilms from 'pages/SingleFilm';
 
 export const App = () => {
   return (

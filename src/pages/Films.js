@@ -1,5 +1,5 @@
 import { WrapperStyle } from 'styles/WrapperStyles.style';
-import Card from 'components/Card';
+import CardFilm from 'components/CardFilm';
 import { WrapperCard } from 'styles/Card.style';
 import { useEffect, useState } from 'react';
 
@@ -15,7 +15,7 @@ export const Films = () => {
       });
   }, []);
 
-  const filmsRender = films.map(film => <Card key={film.episode_id} data={film} />);
+  const filmsRender = films.map(film => <CardFilm key={film.episode_id} data={film} />);
 
   return (
     <WrapperStyle>
