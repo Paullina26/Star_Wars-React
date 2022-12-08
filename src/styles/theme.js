@@ -17,6 +17,7 @@ export const colors = {
 
   LogoFont: '#DDB703',
   LogoBorderBottom: '#DDB703',
+  LoadingFont: '#ddb9038e',
 
   BasicFont: '#D9D9D9',
 
