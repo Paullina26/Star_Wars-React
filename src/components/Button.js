@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const Button = styled.button`
-  height: 35px;
-  padding: 0 10px;
+export const Button = styled(Link)`
+  text-decoration: none;
+  padding: 3px 10px;
   border: 2px solid ${({ theme }) => theme.ButtonBorder};
   box-shadow: 1px 1px 5px 1px ${({ theme }) => theme.ButtonBorderShadow};
   background: ${({ theme }) => theme.GlassBacgraund};

@@ -1,7 +1,7 @@
 import { CardStyle, Title, Picture } from 'styles/Card.style';
 import { imgMoveCovers } from 'data/img';
 import NoPicture from '../assets/Picture/noPicture.jpg';
-import { Link } from 'react-router-dom';
+import { Button } from './Button';
 
 export const CardFilm = props => {
   const urlImg = imgMoveCovers.find(cover => cover.episode === props.data.episode_id);
@@ -14,7 +14,7 @@ export const CardFilm = props => {
       <Picture>
         <img src={urlImg?.imgPath || NoPicture} />
       </Picture>
-      <Link to={`/films/${idFilm}`}>Show More</Link>
+      <Button to={`/films/${idFilm}`}>Show More</Button>
     </CardStyle>
   );
 };

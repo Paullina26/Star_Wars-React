@@ -1,10 +1,11 @@
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { CardStyle, Title, Picture, WrapperCard, WrapperInformation } from 'styles/Card.style';
 import { imgMoveCovers } from 'data/img';
 import NoPicture from '../assets/Picture/noPicture.jpg';
 import { WrapperStyle } from 'styles/WrapperStyles.style';
 import { useEffect, useState } from 'react';
+import { Button } from 'components/Button';
 
 const SingleFilm = () => {
   const params = useParams();
@@ -31,7 +32,7 @@ const SingleFilm = () => {
           <Picture>
             <img src={urlImg?.imgPath || NoPicture} />
           </Picture>
-          <Link to={`/films`}>Back</Link>
+          <Button to={`/films`}>Back</Button>
         </CardStyle>
         <WrapperInformation>
           <p>{`Opening Crawl: ${film.opening_crawl}`}</p>
