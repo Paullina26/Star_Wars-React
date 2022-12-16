@@ -7,6 +7,7 @@ import Home from 'pages/Home';
 import Films from 'pages/Films';
 import Charakters from 'pages/Charakters';
 import Planets from 'pages/Planets';
+import SingleFilms from 'pages/SingleFilm';
 
 export const App = () => {
   return (
@@ -17,7 +18,7 @@ export const App = () => {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/films' element={<Films />} />
-            {/* <Route path='/films/:id' element={<SingleFilms />} /> */}
+            <Route path='/films/:idFilm' element={<SingleFilms />} />
             <Route path='/charakters' element={<Charakters />} />
             <Route path='/planets' element={<Planets />} />
           </Routes>
