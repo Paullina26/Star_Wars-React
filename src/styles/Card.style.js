@@ -13,7 +13,6 @@ export const CardStyle = styled.div`
   height: 450px;
   margin: 0px 15px 30px;
   backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
   background: ${({ theme }) => theme.GlassBacgraund};
   border: 2px solid ${({ theme }) => theme.GlassBorder};
   box-shadow: 0px 8px 32px ${({ theme }) => theme.GlassShadow};
@@ -49,7 +48,9 @@ export const WrapperInformation = styled.h4`
   border: 2px solid ${({ theme }) => theme.GlassBorder};
   box-shadow: 0px 8px 32px ${({ theme }) => theme.GlassShadow};
   border-radius: 10px 10px 10px 10px;
+  backdrop-filter: blur(6px);
   p {
     margin: 20px;
+    font-size: 20px;
   }
 `;

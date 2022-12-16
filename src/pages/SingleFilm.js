@@ -6,19 +6,22 @@ import NoPicture from '../assets/Picture/noPicture.jpg';
 import { WrapperStyle } from 'styles/WrapperStyles.style';
 import { useEffect, useState } from 'react';
 import { Button } from 'components/Button';
+import Loader from '../components/Loader';
 
 const SingleFilm = () => {
   const params = useParams();
-
   const FILM_URL = `https://swapi.dev/api/films/${params.idFilm}`;
-
   const [film, setFilm] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
+
     fetch(FILM_URL)
       .then(response => response.json())
       .then(data => {
         setFilm(data);
+        setIsLoading(false);
       });
   }, []);
 
@@ -26,6 +29,7 @@ const SingleFilm = () => {
 
   return (
     <WrapperStyle>
+      {isLoading && <Loader />}
       <WrapperCard>
         <CardStyle>
           <Title>{film.title}</Title>
