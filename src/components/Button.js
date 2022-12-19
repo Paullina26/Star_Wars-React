@@ -9,7 +9,6 @@ export const Button = styled(Link)`
   background: ${({ theme }) => theme.GlassBacgraund};
   border-radius: 10px;
   display: inline-block;
-  margin: 0px 35px 20px 35px;
   color: ${({ theme }) => theme.BasicFont};
   font-size: 20px;
   cursor: pointer;

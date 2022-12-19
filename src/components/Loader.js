@@ -15,9 +15,9 @@ export const BounceAnimation = keyframes`
 `;
 
 export const WrapperLoader = styled.div`
-  position: relative;
+  z-index: 1;
+  position: absolute;
   font-size: 35px;
-  margin: 0px auto;
   justify-content: center;
   width: 400px;
   height: 200px;
@@ -26,6 +26,9 @@ export const WrapperLoader = styled.div`
   box-shadow: 0px 8px 32px ${({ theme }) => theme.GlassShadow};
   border-radius: 10px 10px 10px 10px;
   color: ${({ theme }) => theme.LogoFont};
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const Loading = styled.div`
