@@ -7,6 +7,12 @@ export const WrapperStyle = styled.div`
   justify-content: center;
 `;
 
+export const Wrapper = styled.div`
+  display: inline-block;
+  width: 100px;
+  margin-bottom: 20px;
+`;
+
 export const Counter = styled.button`
   width: 35px;
   height: 35px;
@@ -20,12 +26,14 @@ export const Counter = styled.button`
   background-color: ${({ theme }) => theme.GlassBacgraund};
 `;
 
-export const Pagination = () => {
+export const Pagination = props => {
   return (
     <WrapperStyle>
-      <Button>Back</Button>
-      <Counter>1</Counter>
-      <Button>Next</Button>
+      <Wrapper>{!props.isFirstPage && <Button onClick={props.backPage}>Back</Button>}</Wrapper>
+      <Wrapper>
+        <Counter>{props.currentPage}</Counter>
+      </Wrapper>
+      <Wrapper>{!props.isLastPage && <Button onClick={props.nextPage}>Next</Button>}</Wrapper>
     </WrapperStyle>
   );
 };
