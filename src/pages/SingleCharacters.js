@@ -1,50 +1,49 @@
 import { useParams } from 'react-router-dom';
 import { CardStyle, Title, Picture, WrapperCard, WrapperInformation } from 'styles/Card.style';
-import { imgMoveCovers } from 'data/img';
 import NoPicture from '../assets/Picture/noPicture.jpg';
 import { WrapperStyle } from 'styles/WrapperStyles.style';
 import { useEffect, useState } from 'react';
 import { Button } from 'components/Button';
 import Loader from '../components/Loader';
+import { imgMoveCovers } from 'data/img';
 
-const SingleFilm = () => {
+const SingleCharacter = () => {
   const params = useParams();
-  const FILM_URL = `https://swapi.dev/api/films/${params.idFilm}`;
-  const [film, setFilm] = useState([]);
+  const CHARACTER_URL = `https://swapi.dev/api/people/${params.idCharacter}`;
+  const [character, setCharacter] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(FILM_URL)
+    fetch(CHARACTER_URL)
       .then(response => response.json())
       .then(data => {
-        setFilm(data);
+        setCharacter(data);
         setIsLoading(false);
       });
   }, []);
-
-  const urlImg = imgMoveCovers.find(cover => cover.episode === film.episode_id);
+  const urlImg = imgMoveCovers.find(cover => cover.episode === character.episode_id);
 
   return (
     <WrapperStyle>
       {isLoading && <Loader />}
       <WrapperCard>
         <CardStyle>
-          <Title>{film.title}</Title>
+          <Title>{character.name}</Title>
           <Picture>
             <img src={urlImg?.imgPath || NoPicture} />
           </Picture>
-          <Button to={`/films`}>Back</Button>
+          <Button to={`/characters`}>Back</Button>
         </CardStyle>
         <WrapperInformation>
-          <p>{`Opening Crawl: ${film.opening_crawl}`}</p>
-          <p>{`Date Production: ${film.release_date}`}</p>
-          <p>{`Producer: ${film.producer}`}</p>
-          <p>{`Director: ${film.director}`}</p>
+          <p>{`Height: ${character.height}`}</p>
+          <p>{`Eye Color: ${character.eye_color}`}</p>
+          <p>{`Brith Year: ${character.birth_year}`}</p>
+          <p>{`Gender: ${character.gender}`}</p>
         </WrapperInformation>
       </WrapperCard>
     </WrapperStyle>
   );
 };
 
-export default SingleFilm;
+export default SingleCharacter;
