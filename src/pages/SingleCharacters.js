@@ -2,10 +2,9 @@ import { useParams } from 'react-router-dom';
 import { CardStyle, Title, Picture, WrapperCard, WrapperInformation } from 'styles/Card.style';
 import NoPicture from '../assets/Picture/noPicture.jpg';
 import { useEffect, useState } from 'react';
-import { Button } from 'components/Button';
 import Loader from '../components/Loader';
-import { imgMoveCovers } from 'data/img';
 import SingleElementWrapper from 'shared/SingleElementWrapper';
+import { imgPeople } from 'data/img';
 
 const SingleCharacter = () => {
   const params = useParams();
@@ -23,8 +22,7 @@ const SingleCharacter = () => {
         setIsLoading(false);
       });
   }, []);
-
-  const urlImg = imgMoveCovers.find(cover => cover.episode === character.episode_id);
+  const urlImg = imgPeople.find(cover => cover.name === character.name);
 
   if (isLoading) return <Loader />;
 
