@@ -9,7 +9,7 @@ export const Navigation = () => {
         Home
       </StyledLink>
       <StyledLink to='/films'>Films</StyledLink>
-      <StyledLink to='/charakters'>Charakters</StyledLink>
+      <StyledLink to='/characters'>Charakters</StyledLink>
       <StyledLink to='/planets'>Planets</StyledLink>
     </WrapperStyle>
   );

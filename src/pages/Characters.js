@@ -22,8 +22,6 @@ export const Characters = () => {
         setIsLoading(false);
       });
   }, [currentPage]);
-  // console.log(peoples);
-  console.log(characters);
 
   const nextPage = () => {
     if (!characters.next) return;
