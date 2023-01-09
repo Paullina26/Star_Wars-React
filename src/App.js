@@ -9,6 +9,7 @@ import Characters from 'pages/Characters';
 import Planets from 'pages/Planets';
 import SingleFilms from 'pages/SingleFilm';
 import SingleCharacter from 'pages/SingleCharacters';
+import GlobalProvider from 'utils/GlobalContext';
 
 export const App = () => {
   return (
@@ -16,14 +17,16 @@ export const App = () => {
       <ThemeProvider theme={colors}>
         <GlobalStyle />
         <Layout>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/films' element={<Films />} />
-            <Route path='/films/:idFilm' element={<SingleFilms />} />
-            <Route path='/characters' element={<Characters />} />
-            <Route path='/characters/:idCharacter' element={<SingleCharacter />} />
-            <Route path='/planets' element={<Planets />} />
-          </Routes>
+          <GlobalProvider>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/films' element={<Films />} />
+              <Route path='/films/:idFilm' element={<SingleFilms />} />
+              <Route path='/characters' element={<Characters />} />
+              <Route path='/characters/:idCharacter' element={<SingleCharacter />} />
+              <Route path='/planets' element={<Planets />} />
+            </Routes>
+          </GlobalProvider>
         </Layout>
       </ThemeProvider>
     </Router>

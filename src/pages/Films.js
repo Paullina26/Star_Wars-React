@@ -7,7 +7,8 @@ export const Films = () => {
   const FILMS_URL = 'https://swapi.dev/api/films/';
   const [films, setFilms] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  console.log('rerender');
+  console.log(isLoading);
   useEffect(() => {
     setIsLoading(true);
     fetch(FILMS_URL)

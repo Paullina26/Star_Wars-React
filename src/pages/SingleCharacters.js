@@ -5,8 +5,13 @@ import { useEffect, useState } from 'react';
 import Loader from '../components/Loader';
 import SingleElementWrapper from 'shared/SingleElementWrapper';
 import { imgPeople } from 'data/img';
+import { useContext } from 'react';
+import { GlobalContext } from 'utils/GlobalContext';
 
 const SingleCharacter = () => {
+  const contex = useContext(GlobalContext);
+  console.log(contex);
+
   const params = useParams();
   const CHARACTER_URL = `https://swapi.dev/api/people/${params.idCharacter}`;
   const [character, setCharacter] = useState([]);
@@ -22,6 +27,7 @@ const SingleCharacter = () => {
         setIsLoading(false);
       });
   }, []);
+
   const urlImg = imgPeople.find(cover => cover.name === character.name);
 
   if (isLoading) return <Loader />;
