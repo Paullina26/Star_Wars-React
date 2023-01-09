@@ -1,4 +1,3 @@
-import { WrapperStyle } from 'styles/WrapperStyles.style';
 import CardFilm from 'components/CardFilm';
 import { WrapperCard } from 'styles/Card.style';
 import { useEffect, useState } from 'react';
@@ -22,10 +21,10 @@ export const Films = () => {
   const filmsRender = films.map(film => <CardFilm key={film.episode_id} data={film} />);
 
   return (
-    <WrapperStyle>
+    <>
       {isLoading && <Loader />}
       <WrapperCard>{filmsRender}</WrapperCard>
-    </WrapperStyle>
+    </>
   );
 };
 

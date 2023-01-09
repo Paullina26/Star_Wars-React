@@ -1,4 +1,3 @@
-import { WrapperStyle } from 'styles/WrapperStyles.style';
 import Pagination from 'components/Pagination';
 import { useEffect, useState } from 'react';
 import Loader from '../components/Loader';
@@ -11,7 +10,6 @@ export const Characters = () => {
   const [characters, setCharacters] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-
   useEffect(() => {
     setIsLoading(true);
     fetch(`${PEOPLE_PAGE}${currentPage}`)
@@ -38,11 +36,11 @@ export const Characters = () => {
   const isFirstPage = !characters.previous;
 
   return (
-    <WrapperStyle>
+    <>
       <Pagination nextPage={nextPage} currentPage={currentPage} isLastPage={isLastPage} isFirstPage={isFirstPage} backPage={backPage} />
       {isLoading && <Loader />}
       <WrapperCard>{peoplesRender}</WrapperCard>
-    </WrapperStyle>
+    </>
   );
 };
 

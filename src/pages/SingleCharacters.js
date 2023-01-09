@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom';
 import { CardStyle, Title, Picture, WrapperCard, WrapperInformation } from 'styles/Card.style';
 import NoPicture from '../assets/Picture/noPicture.jpg';
-import { WrapperStyle } from 'styles/WrapperStyles.style';
 import { useEffect, useState } from 'react';
 import { Button } from 'components/Button';
 import Loader from '../components/Loader';
 import { imgMoveCovers } from 'data/img';
+import SingleElementWrapper from 'shared/SingleElementWrapper';
 
 const SingleCharacter = () => {
   const params = useParams();
@@ -14,6 +14,7 @@ const SingleCharacter = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    // TODO
     setIsLoading(true);
     fetch(CHARACTER_URL)
       .then(response => response.json())
@@ -22,27 +23,18 @@ const SingleCharacter = () => {
         setIsLoading(false);
       });
   }, []);
+
   const urlImg = imgMoveCovers.find(cover => cover.episode === character.episode_id);
 
+  if (isLoading) return <Loader />;
+
   return (
-    <WrapperStyle>
-      {isLoading && <Loader />}
-      <WrapperCard>
-        <CardStyle>
-          <Title>{character.name}</Title>
-          <Picture>
-            <img src={urlImg?.imgPath || NoPicture} />
-          </Picture>
-          <Button to={`/characters`}>Back</Button>
-        </CardStyle>
-        <WrapperInformation>
-          <p>{`Height: ${character.height}`}</p>
-          <p>{`Eye Color: ${character.eye_color}`}</p>
-          <p>{`Brith Year: ${character.birth_year}`}</p>
-          <p>{`Gender: ${character.gender}`}</p>
-        </WrapperInformation>
-      </WrapperCard>
-    </WrapperStyle>
+    <SingleElementWrapper img={urlImg?.imgPath} title={character.name} backButton='/characters'>
+      <p>{`Height: ${character.height}`}</p>
+      <p>{`Eye Color: ${character.eye_color}`}</p>
+      <p>{`Brith Year: ${character.birth_year}`}</p>
+      <p>{`Gender: ${character.gender}`}</p>
+    </SingleElementWrapper>
   );
 };
 

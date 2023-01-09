@@ -40,7 +40,7 @@ export const imgMoveCovers = [
   },
 ];
 
-export const imgPepole = [
+export const imgPeople = [
   {
     name: 'R2-D2',
     imgPath: CharacterR2D2,

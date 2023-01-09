@@ -1,49 +1,52 @@
 import { useParams } from 'react-router-dom';
-import { CardStyle, Title, Picture, WrapperCard, WrapperInformation } from 'styles/Card.style';
 import { imgMoveCovers } from 'data/img';
-import NoPicture from '../assets/Picture/noPicture.jpg';
-import { WrapperStyle } from 'styles/WrapperStyles.style';
 import { useEffect, useState } from 'react';
-import { Button } from 'components/Button';
 import Loader from '../components/Loader';
+import SingleElementWrapper from 'shared/SingleElementWrapper';
+import { get } from 'api/api';
 
 const SingleFilm = () => {
-  const params = useParams();
-  const FILM_URL = `https://swapi.dev/api/films/${params.idFilm}`;
+  // const params = useParams();
+  const { idFilm } = useParams();
+
   const [film, setFilm] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
+  const getFilm = async () => {
+    const params = `films/${idFilm}`;
+    const film = await get(params);
+
+    setFilm(film);
+    setIsLoading(false);
+  };
+
   useEffect(() => {
     setIsLoading(true);
-    fetch(FILM_URL)
-      .then(response => response.json())
-      .then(data => {
-        setFilm(data);
-        setIsLoading(false);
-      });
+
+    getFilm();
+    // fetch(FILM_URL)
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     setFilm(data);
+    //     setIsLoading(false);
+    //   });
   }, []);
 
   const urlImg = imgMoveCovers.find(cover => cover.episode === film.episode_id);
 
+  if (isLoading) return <Loader />;
+
+  {
+    /* {isLoading && <Loader />} */
+  }
   return (
-    <WrapperStyle>
-      {isLoading && <Loader />}
-      <WrapperCard>
-        <CardStyle>
-          <Title>{film.title}</Title>
-          <Picture>
-            <img src={urlImg?.imgPath || NoPicture} />
-          </Picture>
-          <Button to={`/films`}>Back</Button>
-        </CardStyle>
-        <WrapperInformation>
-          <p>{`Opening Crawl: ${film.opening_crawl}`}</p>
-          <p>{`Date Production: ${film.release_date}`}</p>
-          <p>{`Producer: ${film.producer}`}</p>
-          <p>{`Director: ${film.director}`}</p>
-        </WrapperInformation>
-      </WrapperCard>
-    </WrapperStyle>
+    <SingleElementWrapper img={urlImg?.imgPath} title={film.title} backButton='/films'>
+      <p>Opening Crawl: {film.opening_crawl}</p>
+      <p>Date Production: {film.release_date}</p>
+      {/* TODO */}
+      <p>{`Producer: ${film.producer}`}</p>
+      <p>{`Director: ${film.director}`}</p>
+    </SingleElementWrapper>
   );
 };
 
