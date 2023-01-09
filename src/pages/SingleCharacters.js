@@ -5,7 +5,7 @@ import { WrapperStyle } from 'styles/WrapperStyles.style';
 import { useEffect, useState } from 'react';
 import { Button } from 'components/Button';
 import Loader from '../components/Loader';
-import { imgMoveCovers } from 'data/img';
+import { imgPepole } from 'data/img';
 
 const SingleCharacter = () => {
   const params = useParams();
@@ -22,7 +22,7 @@ const SingleCharacter = () => {
         setIsLoading(false);
       });
   }, []);
-  const urlImg = imgMoveCovers.find(cover => cover.episode === character.episode_id);
+  const urlImg = imgPepole.find(cover => cover.name === character.name);
 
   return (
     <WrapperStyle>
