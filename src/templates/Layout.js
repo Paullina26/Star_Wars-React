@@ -1,5 +1,6 @@
 import Navigation from 'components/Navigation';
 import styled from 'styled-components';
+import { MainStyle } from 'styles/WrapperStyles.style';
 
 export const WrapperStyle = styled.div`
   width: 100%;
@@ -13,7 +14,7 @@ const Layout = ({ children }) => {
   return (
     <WrapperStyle>
       <Navigation />
-      {children}
+      <MainStyle>{children}</MainStyle>
     </WrapperStyle>
   );
 };

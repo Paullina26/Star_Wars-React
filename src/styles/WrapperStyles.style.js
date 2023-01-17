@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 
-export const WrapperStyle = styled.div`
-  margin-top: 5vh;
+export const MainStyle = styled.div`
   color: ${({ theme }) => theme.BasicFont};
-  margin-bottom: 40px;
-  margin-right: 15px;
-  margin-left: 215px;
+  margin: 5vh 15px 40px 215px;
   position: relative;
 `;

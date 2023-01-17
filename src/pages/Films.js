@@ -1,4 +1,3 @@
-import { WrapperStyle } from 'styles/WrapperStyles.style';
 import CardFilm from 'components/CardFilm';
 import { WrapperCard } from 'styles/Card.style';
 import { useEffect, useState } from 'react';
@@ -8,7 +7,8 @@ export const Films = () => {
   const FILMS_URL = 'https://swapi.dev/api/films/';
   const [films, setFilms] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  console.log('rerender');
+  console.log(isLoading);
   useEffect(() => {
     setIsLoading(true);
     fetch(FILMS_URL)
@@ -22,10 +22,10 @@ export const Films = () => {
   const filmsRender = films.map(film => <CardFilm key={film.episode_id} data={film} />);
 
   return (
-    <WrapperStyle>
+    <>
       {isLoading && <Loader />}
       <WrapperCard>{filmsRender}</WrapperCard>
-    </WrapperStyle>
+    </>
   );
 };
 
