@@ -55,7 +55,7 @@ export const imgPepole = [
   },
   {
     name: 'C-3PO',
-    imimgPathg: CharacterC3PO,
+    imimgPath: CharacterC3PO,
   },
   {
     name: 'Leia Organa',
