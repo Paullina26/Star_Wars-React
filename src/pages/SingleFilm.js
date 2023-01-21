@@ -6,9 +6,7 @@ import SingleElementWrapper from 'shared/SingleElementWrapper';
 import { get } from 'api/api';
 
 const SingleFilm = () => {
-  // const params = useParams();
   const { idFilm } = useParams();
-
   const [film, setFilm] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -22,7 +20,6 @@ const SingleFilm = () => {
 
   useEffect(() => {
     setIsLoading(true);
-
     getFilm();
     // fetch(FILM_URL)
     //   .then(response => response.json())
@@ -43,9 +40,8 @@ const SingleFilm = () => {
     <SingleElementWrapper img={urlImg?.imgPath} title={film.title} backButton='/films'>
       <p>Opening Crawl: {film.opening_crawl}</p>
       <p>Date Production: {film.release_date}</p>
-      {/* TODO */}
-      <p>{`Producer: ${film.producer}`}</p>
-      <p>{`Director: ${film.director}`}</p>
+      <p>Producer: {film.producer}</p>
+      <p>Director: {film.director}</p>
     </SingleElementWrapper>
   );
 };

@@ -5,7 +5,7 @@ import ImgEpisode4 from '../assets/covers_films/episode_4.jpg';
 import ImgEpisode5 from '../assets/covers_films/episode_5.jpg';
 import ImgEpisode6 from '../assets/covers_films/episode_6.jpg';
 import CharacterR2D2 from '../assets/people/r2d2.jpeg';
-import CharacterDaethVader from '../assets/people/DaethVader.jpg';
+import CharacterDarthVader from '../assets/people/DaethVader.jpg';
 import CharacterLukeSkywalker from '../assets/people/LukeSkywalker.jpeg';
 import CharacterC3PO from '../assets/people/C3PO.jpg';
 import CharacterLeiaOrgana from '../assets/people/LeiaOrgana.jpg';
@@ -47,7 +47,7 @@ export const imgPeople = [
   },
   {
     name: 'Darth Vader',
-    imgPath: CharacterDaethVader,
+    imgPath: CharacterDarthVader,
   },
   {
     name: 'Luke Skywalker',
@@ -55,7 +55,7 @@ export const imgPeople = [
   },
   {
     name: 'C-3PO',
-    imimgPathg: CharacterC3PO,
+    imgPath: CharacterC3PO,
   },
   {
     name: 'Leia Organa',

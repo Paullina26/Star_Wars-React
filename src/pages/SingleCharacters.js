@@ -1,6 +1,4 @@
 import { useParams } from 'react-router-dom';
-import { CardStyle, Title, Picture, WrapperCard, WrapperInformation } from 'styles/Card.style';
-import NoPicture from '../assets/Picture/noPicture.jpg';
 import { useEffect, useState } from 'react';
 import Loader from '../components/Loader';
 import SingleElementWrapper from 'shared/SingleElementWrapper';
@@ -10,8 +8,6 @@ import { GlobalContext } from 'utils/GlobalContext';
 
 const SingleCharacter = () => {
   const contex = useContext(GlobalContext);
-  console.log(contex);
-
   const params = useParams();
   const CHARACTER_URL = `https://swapi.dev/api/people/${params.idCharacter}`;
   const [character, setCharacter] = useState([]);
