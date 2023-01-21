@@ -2,26 +2,29 @@ import CardFilm from 'components/CardFilm';
 import { WrapperCard } from 'styles/Card.style';
 import { useEffect, useState } from 'react';
 import Loader from '../components/Loader';
+import { get } from 'api/api';
 
 export const Films = () => {
-  const FILMS_URL = 'https://swapi.dev/api/films/';
   const [films, setFilms] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
+  const getFilms = async () => {
+    const params = `films/`;
+    const films = await get(params);
+    setFilms(films.results);
+    setIsLoading(false);
+  };
+
   useEffect(() => {
     setIsLoading(true);
-    fetch(FILMS_URL)
-      .then(response => response.json())
-      .then(data => {
-        setFilms(data.results);
-        setIsLoading(false);
-      });
+    getFilms();
   }, []);
 
   const filmsRender = films.map(film => <CardFilm key={film.episode_id} data={film} />);
 
+  if (isLoading) return <Loader />;
   return (
     <>
-      {isLoading && <Loader />}
       <WrapperCard>{filmsRender}</WrapperCard>
     </>
   );

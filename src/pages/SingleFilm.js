@@ -13,7 +13,6 @@ const SingleFilm = () => {
   const getFilm = async () => {
     const params = `films/${idFilm}`;
     const film = await get(params);
-
     setFilm(film);
     setIsLoading(false);
   };
@@ -21,21 +20,11 @@ const SingleFilm = () => {
   useEffect(() => {
     setIsLoading(true);
     getFilm();
-    // fetch(FILM_URL)
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     setFilm(data);
-    //     setIsLoading(false);
-    //   });
   }, []);
 
   const urlImg = imgMoveCovers.find(cover => cover.episode === film.episode_id);
 
   if (isLoading) return <Loader />;
-
-  {
-    /* {isLoading && <Loader />} */
-  }
   return (
     <SingleElementWrapper img={urlImg?.imgPath} title={film.title} backButton='/films'>
       <p>Opening Crawl: {film.opening_crawl}</p>
