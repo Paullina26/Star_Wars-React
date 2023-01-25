@@ -32,7 +32,7 @@ const SingleCharacter = () => {
     <SingleElementWrapper img={urlImg?.imgPath} title={character.name} backButton='/characters'>
       <p>{`Height: ${character.height}`}</p>
       <p>{`Eye Color: ${character.eye_color}`}</p>
-      <p>{`Brith Year: ${character.birth_year}`}</p>
+      <p>{`Birth Year: ${character.birth_year}`}</p>
       <p>{`Gender: ${character.gender}`}</p>
     </SingleElementWrapper>
   );

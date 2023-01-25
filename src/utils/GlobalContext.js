@@ -5,7 +5,7 @@ import { createContext } from 'react';
 export const GlobalContext = createContext({
   nextPage: () => {},
   backPage: () => {},
-  currentPag: 1,
+  currentPage: 1,
   isLoading: false,
   setIsLoading: () => {},
   setNext: () => {},

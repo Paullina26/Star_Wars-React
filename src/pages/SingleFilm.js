@@ -1,14 +1,15 @@
 import { useParams } from 'react-router-dom';
 import { imgMoveCovers } from 'data/img';
 import { useEffect, useState } from 'react';
-import Loader from '../components/Loader';
 import SingleElementWrapper from 'shared/SingleElementWrapper';
 import { get } from 'api/api';
+import { useContext } from 'react';
+import { GlobalContext } from 'utils/GlobalContext';
 
 const SingleFilm = () => {
+  const { setIsLoading } = useContext(GlobalContext);
   const { idFilm } = useParams();
   const [film, setFilm] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
 
   const getFilm = async () => {
     const params = `films/${idFilm}`;
@@ -24,7 +25,6 @@ const SingleFilm = () => {
 
   const urlImg = imgMoveCovers.find(cover => cover.episode === film.episode_id);
 
-  if (isLoading) return <Loader />;
   return (
     <SingleElementWrapper img={urlImg?.imgPath} title={film.title} backButton='/films'>
       <p>Opening Crawl: {film.opening_crawl}</p>
