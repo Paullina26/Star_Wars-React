@@ -1,23 +1,19 @@
 import { WrapperCard } from 'styles/Card.style';
 import Pagination from 'components/Pagination';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { get } from 'api/api';
-import { useContext } from 'react';
-import { GlobalContext } from 'utils/GlobalContext';
 import CardPlanet from 'components/CardPlanet';
+import usePagination from 'utils/usePagination';
+import { GlobalContext } from 'utils/GlobalContext';
 
 export const Planets = () => {
-  const { setCurrentPage, currentPage, nextPage, backPage, setIsLoading, setNext, setPrev, isLastPage, isFirstPage } =
-    useContext(GlobalContext);
+  const { setIsLoading } = useContext(GlobalContext);
+  const { currentPage, nextPage, backPage, setNext, setPrev, isLastPage, isFirstPage } = usePagination();
   const [planets, setPlanets] = useState([]);
 
-  useEffect(() => {
-    setCurrentPage(1);
-  }, []);
-
   const getPlanets = async () => {
-    const params = `planets/?page=${currentPage}`;
-    const planets = await get(params);
+    setIsLoading(true);
+    const planets = await get(`planets/?page=${currentPage}`);
     setPlanets(planets.results);
     setNext(planets.next);
     setPrev(planets.previous);
@@ -25,8 +21,11 @@ export const Planets = () => {
   };
 
   useEffect(() => {
-    setIsLoading(true);
     getPlanets();
+
+    return () => {
+      setPlanets([]);
+    };
   }, [currentPage]);
 
   const planetsRender = planets.map(planet => <CardPlanet key={planet.name} data={planet} />);

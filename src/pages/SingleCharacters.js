@@ -3,11 +3,8 @@ import { useEffect, useState } from 'react';
 import Loader from '../components/Loader';
 import SingleElementWrapper from 'shared/SingleElementWrapper';
 import { imgPeople } from 'data/img';
-import { useContext } from 'react';
-import { GlobalContext } from 'utils/GlobalContext';
 
 const SingleCharacter = () => {
-  const contex = useContext(GlobalContext);
   const params = useParams();
   const CHARACTER_URL = `https://swapi.dev/api/people/${params.idCharacter}`;
   const [character, setCharacter] = useState([]);

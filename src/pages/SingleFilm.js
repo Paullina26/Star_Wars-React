@@ -3,11 +3,8 @@ import { imgMoveCovers } from 'data/img';
 import { useEffect, useState } from 'react';
 import SingleElementWrapper from 'shared/SingleElementWrapper';
 import { get } from 'api/api';
-import { useContext } from 'react';
-import { GlobalContext } from 'utils/GlobalContext';
 
 const SingleFilm = () => {
-  const { setIsLoading } = useContext(GlobalContext);
   const { idFilm } = useParams();
   const [film, setFilm] = useState([]);
 
@@ -15,11 +12,9 @@ const SingleFilm = () => {
     const params = `films/${idFilm}`;
     const film = await get(params);
     setFilm(film);
-    setIsLoading(false);
   };
 
   useEffect(() => {
-    setIsLoading(true);
     getFilm();
   }, []);
 
