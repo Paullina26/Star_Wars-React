@@ -29,11 +29,11 @@ export const Counter = styled.button`
 export const Pagination = props => {
   return (
     <WrapperStyle>
-      <Wrapper>{!props.isFirstPage && <Button onClick={props.backPage}>Back</Button>}</Wrapper>
+      <Wrapper>{!props.isFirstPage && <button onClick={props.backPage}>Back</button>}</Wrapper>
       <Wrapper>
         <Counter>{props.currentPage}</Counter>
       </Wrapper>
-      <Wrapper>{!props.isLastPage && <Button onClick={props.nextPage}>Next</Button>}</Wrapper>
+      <Wrapper>{!props.isLastPage && <button onClick={props.nextPage}>Next</button>}</Wrapper>
     </WrapperStyle>
   );
 };
