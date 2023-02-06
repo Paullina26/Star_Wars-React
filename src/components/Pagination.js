@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Button } from './Button';
 
 export const WrapperStyle = styled.div`
   width: 100%;
@@ -26,14 +25,33 @@ export const Counter = styled.button`
   background-color: ${({ theme }) => theme.GlassBacgraund};
 `;
 
+export const Button = styled.button`
+  text-decoration: none;
+  padding: 3px 10px;
+  border: 2px solid ${({ theme }) => theme.ButtonBorder};
+  box-shadow: 1px 1px 5px 1px ${({ theme }) => theme.ButtonBorderShadow};
+  background: ${({ theme }) => theme.GlassBacgraund};
+  border-radius: 10px;
+  display: inline-block;
+  color: ${({ theme }) => theme.BasicFont};
+  font-size: 20px;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid ${({ theme }) => theme.ButtonBorderHover};
+    box-shadow: 1px 1px 5px 1px ${({ theme }) => theme.ButtonBorderShadowHover};
+    transition: 0.2s linear;
+  }
+`;
+
 export const Pagination = props => {
   return (
     <WrapperStyle>
-      <Wrapper>{!props.isFirstPage && <button onClick={props.backPage}>Back</button>}</Wrapper>
+      <Wrapper>{!props.isFirstPage && <Button onClick={props.backPage}>Back</Button>}</Wrapper>
       <Wrapper>
         <Counter>{props.currentPage}</Counter>
       </Wrapper>
-      <Wrapper>{!props.isLastPage && <button onClick={props.nextPage}>Next</button>}</Wrapper>
+      <Wrapper>{!props.isLastPage && <Button onClick={props.nextPage}>Next</Button>}</Wrapper>
     </WrapperStyle>
   );
 };
