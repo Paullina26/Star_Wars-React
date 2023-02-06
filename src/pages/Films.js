@@ -6,7 +6,6 @@ import { GlobalContext } from 'utils/GlobalContext';
 
 export const Films = () => {
   const { setIsLoading } = useContext(GlobalContext);
-
   const [films, setFilms] = useState([]);
 
   const getFilms = async () => {
