@@ -10,6 +10,7 @@ import Planets from 'pages/Planets';
 import SingleFilms from 'pages/SingleFilm';
 import SingleCharacter from 'pages/SingleCharacters';
 import GlobalProvider from 'utils/GlobalContext';
+import SinglePlanet from 'pages/SinglePlanet';
 
 export const App = () => {
   return (
@@ -25,6 +26,7 @@ export const App = () => {
               <Route path='/characters' element={<Characters />} />
               <Route path='/characters/:idCharacter' element={<SingleCharacter />} />
               <Route path='/planets' element={<Planets />} />
+              <Route path='/planets/:idPlanet' element={<SinglePlanet />} />
             </Routes>
           </GlobalProvider>
         </Layout>

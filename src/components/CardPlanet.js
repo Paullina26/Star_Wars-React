@@ -4,8 +4,8 @@ import NoPicture from '../assets/Picture/noPicture.jpg';
 import { Button } from './Button';
 
 export const CardPlanet = props => {
-  // const urlImg = imgPeople.find(img => img.name === props.data.name);
-  // const idPeople = props.data.url.slice(29).slice(0, -1);
+  // const urlImg = imgPlanet.find(img => img.name === props.data.name);
+  const idPlanet = props.data.url.slice(30).slice(0, -1);
 
   return (
     <CardStyle>
@@ -13,7 +13,7 @@ export const CardPlanet = props => {
       <Picture>
         <img src={NoPicture} />
       </Picture>
-      {/* <Button to={`/characters/${idPeople}`}>Show More</Button> */}
+      <Button to={`/planets/${idPlanet}`}>Show More</Button>
     </CardStyle>
   );
 };

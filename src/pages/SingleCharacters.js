@@ -11,7 +11,6 @@ const SingleCharacter = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // TODO
     setIsLoading(true);
     fetch(CHARACTER_URL)
       .then(response => response.json())

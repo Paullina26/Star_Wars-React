@@ -3,7 +3,6 @@ import NoPicture from '../assets/Picture/noPicture.jpg';
 import { Button } from 'components/Button';
 
 const SingleElementWrapper = ({ img, title, backButton, children }) => {
-  //   const { img, title, backButton, children } = props;
   return (
     <WrapperCard>
       <CardStyle>
