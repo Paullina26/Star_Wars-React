@@ -3,22 +3,24 @@ import { useEffect, useState } from 'react';
 import Loader from '../components/Loader';
 import SingleElementWrapper from 'shared/SingleElementWrapper';
 import { imgPeople } from 'data/img';
+import { get } from 'api/api';
 
 const SingleCharacter = () => {
   const params = useParams();
-  const CHARACTER_URL = `https://swapi.dev/api/people/${params.idCharacter}`;
+  // const CHARACTER_URL = `https://swapi.dev/api/people/${params.idCharacter}`;
   const [character, setCharacter] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    // TODO
+  const getSingleListData = async () => {
     setIsLoading(true);
-    fetch(CHARACTER_URL)
-      .then(response => response.json())
-      .then(data => {
-        setCharacter(data);
-        setIsLoading(false);
-      });
+    const apiLink = `/people/${params.idCharacter}`;
+    const character = await get(apiLink);
+    setCharacter(character);
+    setIsLoading(false);
+  };
+
+  useEffect(() => {
+    getSingleListData();
   }, []);
 
   const urlImg = imgPeople.find(cover => cover.name === character.name);
