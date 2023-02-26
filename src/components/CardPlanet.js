@@ -6,6 +6,7 @@ import { Button } from './Button';
 export const CardPlanet = props => {
   // const urlImg = imgPlanet.find(img => img.name === props.data.name);
   const idPlanet = props.data.url.slice(30).slice(0, -1);
+  console.log(props);
 
   return (
     <CardStyle>
