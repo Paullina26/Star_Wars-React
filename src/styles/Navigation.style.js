@@ -10,7 +10,7 @@ export const WrapperStyle = styled.nav`
   justify-content: flex-start;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  background: ${({ theme }) => theme.GlassBacgraund};
+  background: ${({ theme }) => theme.GlassBackground};
   border-right: 2px solid ${({ theme }) => theme.GlassBorder};
   box-shadow: 0px 8px 32px ${({ theme }) => theme.GlassShadow};
   border-radius: 0px 10px 10px 0px;

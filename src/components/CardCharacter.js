@@ -1,7 +1,7 @@
 import { CardStyle, Title, Picture } from 'styles/Card.style';
 import { imgPeople } from 'data/img';
 import NoPicture from '../assets/Picture/noPicture.jpg';
-import { Button } from './Button';
+import { Button } from '../styles/Button.style';
 
 export const CardCharacter = props => {
   const urlImg = imgPeople.find(img => img.name === props.data.name);
