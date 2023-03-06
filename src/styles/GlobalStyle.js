@@ -16,7 +16,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Signika', sans-serif;
     position: relative;
-    /* background-color: ${({ theme }) => theme.BasicBacgraund}; */
     background-image: url(${img});
     background-repeat: no-repeat;
     background-size: cover;

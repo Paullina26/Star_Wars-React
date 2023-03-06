@@ -6,7 +6,7 @@ export const Button = styled(Link)`
   padding: 3px 10px;
   border: 2px solid ${({ theme }) => theme.ButtonBorder};
   box-shadow: 1px 1px 5px 1px ${({ theme }) => theme.ButtonBorderShadow};
-  background: ${({ theme }) => theme.GlassBacgraund};
+  background: ${({ theme }) => theme.GlassBackground};
   border-radius: 10px;
   display: inline-block;
   color: ${({ theme }) => theme.BasicFont};

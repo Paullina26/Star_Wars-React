@@ -1,6 +1,6 @@
 import { CardStyle, Title, Picture, WrapperCard, WrapperInformation } from 'styles/Card.style';
 import NoPicture from '../assets/Picture/noPicture.jpg';
-import { Button } from 'components/Button';
+import { Button } from 'styles/Button.style';
 
 const SingleElementWrapper = ({ img, title, backButton, children }) => {
   return (
