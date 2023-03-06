@@ -18,14 +18,17 @@ export const WrapperStyle = styled.nav`
   margin-right: 25px;
 
   @media ${device.mobileM} {
+    z-index: 1;
     width: 90vw;
     height: 400px;
     border: 2px solid ${({ theme }) => theme.GlassBorder};
     border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 15px 32px ${({ theme }) => theme.GlassShadow};
+    background: ${({ theme }) => theme.GlassBackgroundMobile};
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     margin: 0 auto;
     margin-bottom: 20px;
-    /* margin: 50%-200px; */
-    /* margin: 50px; */
   }
 `;
 

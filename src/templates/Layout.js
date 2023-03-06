@@ -8,11 +8,8 @@ export const WrapperStyle = styled.div`
   height: 100vh;
   padding: 0;
   display: grid;
-  /* grid-template-columns: 200px 1fr; */
   @media ${device.mobileM} {
     display: flex;
-    /* display: inline-flex; */
-    /* display: inline-block; */
     flex-direction: column;
     align-items: center;
   }

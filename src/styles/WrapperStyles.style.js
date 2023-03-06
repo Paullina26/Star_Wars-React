@@ -6,7 +6,11 @@ export const MainStyle = styled.div`
   margin: 5vh 15px 40px 215px;
   position: relative;
   @media ${device.mobileM} {
-    margin: 20px auto;
-    margin-top: 70px;
+    height: 90vh;
+    overflow-y: auto;
+    margin: 0 auto;
+    margin-top: 10vh;
+    /* margin-top: 70px; */
+    /* padding-bottom: 20px; */
   }
 `;

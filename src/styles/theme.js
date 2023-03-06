@@ -6,6 +6,7 @@ export const colors = {
   BasicFont: '#D9D9D9',
 
   GlassBackground: 'rgba(10, 10, 10, 0.5)',
+  GlassBackgroundMobile: 'rgba(10, 10, 10, 0.801)',
   GlassShadow: 'rgba(2, 4, 24, 1)',
   GlassBorder: 'rgba(255, 255, 255, 0.09)',
 
