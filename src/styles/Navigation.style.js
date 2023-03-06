@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { device } from './theme';
 
 export const WrapperStyle = styled.nav`
   position: fixed;
@@ -15,6 +16,17 @@ export const WrapperStyle = styled.nav`
   box-shadow: 0px 8px 32px ${({ theme }) => theme.GlassShadow};
   border-radius: 0px 10px 10px 0px;
   margin-right: 25px;
+
+  @media ${device.mobileM} {
+    width: 90vw;
+    height: 400px;
+    border: 2px solid ${({ theme }) => theme.GlassBorder};
+    border-radius: 0px 0px 10px 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    /* margin: 50%-200px; */
+    /* margin: 50px; */
+  }
 `;
 
 export const StyledLink = styled(NavLink)`

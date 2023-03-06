@@ -21,7 +21,7 @@ export const WrapperLoader = styled.div`
   justify-content: center;
   width: 400px;
   height: 200px;
-  background: ${({ theme }) => theme.GlassBacgraund};
+  background: ${({ theme }) => theme.GlassBackground};
   border: 2px solid ${({ theme }) => theme.GlassBorder};
   box-shadow: 0px 8px 32px ${({ theme }) => theme.GlassShadow};
   border-radius: 10px 10px 10px 10px;

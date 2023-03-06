@@ -19,12 +19,21 @@ export const colors = {
   ButtonBorderShadowHover: '#ddb9037e',
 };
 
-export const sizes = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
-  tablet: '768px',
-  laptop: '1024px',
-  laptopL: '1440px',
-  desktop: '2560px',
+// export const sizes = {
+//   mobileS: '320px',
+//   mobileM: '375px',
+//   mobileL: '425px',
+//   tablet: '768px',
+//   laptop: '1024px',
+//   laptopL: '1440px',
+//   desktop: '2560px',
+// };
+
+export const device = {
+  mobileS: `(max-width: 320px)`,
+  mobileM: `(max-width: 375px)`,
+  mobileL: `(max-width:425px)`,
+  tablet: `(max-width: 768px)`,
+  desktop: `(max-width: 1024px)`,
+  desktopL: `(max-width: 1440px)`,
 };
