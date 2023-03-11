@@ -10,7 +10,5 @@ export const MainStyle = styled.div`
     overflow-y: auto;
     margin: 0 auto;
     margin-top: 10vh;
-    /* margin-top: 70px; */
-    /* padding-bottom: 20px; */
   }
 `;

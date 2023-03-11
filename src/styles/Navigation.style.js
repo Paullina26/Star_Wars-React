@@ -32,6 +32,13 @@ export const WrapperStyle = styled.nav`
   }
 `;
 
+export const WrapperLink = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
 export const StyledLink = styled(NavLink)`
   width: 100%;
   font-weight: 500;

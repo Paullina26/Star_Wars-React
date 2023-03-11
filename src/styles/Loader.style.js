@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { device } from './theme';
 
 export const BounceAnimation = keyframes`
   0% {
@@ -29,6 +30,11 @@ export const WrapperLoader = styled.div`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media ${device.mobileM} {
+    width: 250px;
+    height: 120px;
+    font-size: 25px;
+  }
 `;
 
 export const Loading = styled.div`
@@ -41,6 +47,9 @@ export const Loading = styled.div`
 export const TextLoading = styled.p`
   font-size: 45px;
   font-weight: 700;
+  @media ${device.mobileM} {
+    font-size: 35px;
+  }
 `;
 
 export const Dot = styled.div`
