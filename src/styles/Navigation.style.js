@@ -1,8 +1,20 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { device } from './theme';
 
-export const WrapperStyle = styled.nav`
+const showMenuY = keyframes`
+0% {
+  transform: translateY(0);
+}
+50% {
+  transform: translateY(-120%);
+}
+100% {
+  transform: translateY(0);
+}
+`;
+
+export const Wrapper = styled.nav`
   position: fixed;
   width: 200px;
   height: 100%;
@@ -18,9 +30,9 @@ export const WrapperStyle = styled.nav`
   margin-right: 25px;
 
   @media ${device.mobileM} {
-    z-index: 1;
+    z-index: 2;
     width: 90vw;
-    height: 400px;
+    height: 350px;
     border: 2px solid ${({ theme }) => theme.GlassBorder};
     border-radius: 0px 0px 10px 10px;
     box-shadow: 0px 15px 32px ${({ theme }) => theme.GlassShadow};
@@ -29,7 +41,24 @@ export const WrapperStyle = styled.nav`
     -webkit-backdrop-filter: blur(20px);
     margin: 0 auto;
     margin-bottom: 20px;
+    margin-top: 60px;
+    padding-top: 40px;
+    /* transform: translateY(-50%); */
+    animation: ${showMenuY} 5s linear;
   }
+`;
+
+export const WrapperLogo = styled.div`
+  z-index: 3;
+  position: fixed;
+  width: 90vw;
+  height: 70px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid ${({ theme }) => theme.GlassBorder};
+  background: ${({ theme }) => theme.GlassBackground};
+  border-radius: 0px 0px 10px 10px;
+  /* box-shadow: 0px 15px 32px ${({ theme }) => theme.GlassShadow}; */
 `;
 
 export const WrapperLink = styled.div`
@@ -37,6 +66,8 @@ export const WrapperLink = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  @media ${device.mobileM} {
+  }
 `;
 
 export const StyledLink = styled(NavLink)`
