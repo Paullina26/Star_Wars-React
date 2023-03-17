@@ -5,12 +5,11 @@ export const MainStyle = styled.div`
   color: ${({ theme }) => theme.BasicFont};
   margin: 5vh 15px 40px 215px;
   position: relative;
-  @media ${device.mobileM} {
+  @media ${device.tablet} {
     height: 90vh;
     overflow-y: auto;
     margin: 0 auto;
-    margin-top: 10vh;
-    /* margin-top: 70px; */
-    /* padding-bottom: 20px; */
+    margin-top: 65px;
+    padding-top: 20px;
   }
 `;

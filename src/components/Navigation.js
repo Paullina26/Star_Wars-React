@@ -1,25 +1,20 @@
 import Logo from './Logo';
-import { StyledLink, WrapperStyle } from 'styles/Navigation.style';
-
-const navItems = [
-  { to: '/', name: 'Home' },
-  { to: '/films', name: 'Films' },
-  { to: '/characters', name: 'Characters' },
-  { to: '/planets', name: 'Planets' },
-];
+import { WrapperLogo, WrapperNav } from 'styles/Navigation.style';
+import Burger from './Burger';
+import { useState } from 'react';
+import Menu from './Menu';
 
 export const Navigation = () => {
-  const navItemRender = navItems.map(item => (
-    <StyledLink key={item.name} to={item.to}>
-      {item.name}
-    </StyledLink>
-  ));
+  const [open, setOpen] = useState(false);
 
   return (
-    <WrapperStyle>
-      <Logo />
-      {navItemRender}
-    </WrapperStyle>
+    <WrapperNav>
+      <WrapperLogo>
+        <Logo />
+        <Burger open={open} setOpen={setOpen} />
+      </WrapperLogo>
+      <Menu open={open} setOpen={setOpen} />
+    </WrapperNav>
   );
 };
 
