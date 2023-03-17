@@ -1,9 +1,9 @@
 import { StyledBurger } from 'styles/Burger.style';
 import { bool, func } from 'prop-types';
 
-export const Burger = () => {
+export const Burger = ({ open, setOpen }) => {
   return (
-    <StyledBurger>
+    <StyledBurger open={open} onClick={() => setOpen(!open)}>
       <div />
       <div />
       <div />

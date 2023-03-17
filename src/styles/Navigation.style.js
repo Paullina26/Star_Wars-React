@@ -1,17 +1,12 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { device } from './theme';
 
-const showMenuY = keyframes`
-0% {
-  transform: translateY(0);
-}
-50% {
-  transform: translateY(-120%);
-}
-100% {
-  transform: translateY(0);
-}
+export const WrapperNav = styled.div`
+  @media ${device.tablet} {
+    width: 90vw;
+    margin: 0 auto;
+  }
 `;
 
 export const Wrapper = styled.nav`
@@ -29,7 +24,7 @@ export const Wrapper = styled.nav`
   border-radius: 0px 10px 10px 0px;
   margin-right: 25px;
 
-  @media ${device.mobileM} {
+  @media ${device.tablet} {
     z-index: 2;
     width: 90vw;
     height: 350px;
@@ -43,30 +38,34 @@ export const Wrapper = styled.nav`
     margin-bottom: 20px;
     margin-top: 60px;
     padding-top: 40px;
-    /* transform: translateY(-50%); */
-    animation: ${showMenuY} 5s linear;
+    transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-100%)')};
   }
 `;
 
 export const WrapperLogo = styled.div`
   z-index: 3;
   position: fixed;
-  width: 90vw;
+  width: 200px;
   height: 70px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 2px solid ${({ theme }) => theme.GlassBorder};
   background: ${({ theme }) => theme.GlassBackground};
   border-radius: 0px 0px 10px 10px;
-  /* box-shadow: 0px 15px 32px ${({ theme }) => theme.GlassShadow}; */
+
+  @media ${device.tablet} {
+    width: 90vw;
+  }
 `;
 
 export const WrapperLink = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  margin-top: 100px;
   flex-direction: column;
-  @media ${device.mobileM} {
+  @media ${device.tablet} {
+    margin-top: 0;
   }
 `;
 

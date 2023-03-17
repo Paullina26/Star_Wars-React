@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from './theme';
 
 export const WrapperCard = styled.div`
   width: 100%;
@@ -18,6 +19,12 @@ export const CardStyle = styled.div`
   box-shadow: 0px 8px 32px ${({ theme }) => theme.GlassShadow};
   border-radius: 10px 10px 10px 10px;
   text-align: center;
+  @media ${device.tablet} {
+    width: 280px;
+  }
+  @media ${device.mobileL} {
+    width: 280px;
+  }
 `;
 
 export const Title = styled.h4`
