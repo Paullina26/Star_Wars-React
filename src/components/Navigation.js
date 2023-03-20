@@ -9,11 +9,13 @@ export const Navigation = () => {
 
   return (
     <WrapperNav>
-      <WrapperLogo>
-        <Logo />
-        <Burger open={open} setOpen={setOpen} />
-      </WrapperLogo>
-      <Menu open={open} setOpen={setOpen} />
+      <>
+        <WrapperLogo>
+          <Logo />
+          <Burger open={open} setOpen={setOpen} />
+        </WrapperLogo>
+        <Menu open={open} setOpen={setOpen} />
+      </>
     </WrapperNav>
   );
 };

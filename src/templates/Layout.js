@@ -5,6 +5,8 @@ import { device } from 'styles/theme';
 
 export const WrapperStyle = styled.div`
   width: 100%;
+  /* height: 100vh; */
+  /* height: 100%; */
   height: 100vh;
   padding: 0;
   display: grid;
