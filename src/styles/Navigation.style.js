@@ -7,6 +7,7 @@ export const WrapperNav = styled.div`
   width: 200px;
   position: fixed;
   @media ${device.tablet} {
+    position: relative;
     width: 90vw;
     margin: 0 auto;
   }
