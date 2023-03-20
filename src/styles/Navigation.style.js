@@ -3,6 +3,9 @@ import { NavLink } from 'react-router-dom';
 import { device } from './theme';
 
 export const WrapperNav = styled.div`
+  margin: 0;
+  width: 200px;
+  position: fixed;
   @media ${device.tablet} {
     width: 90vw;
     margin: 0 auto;
