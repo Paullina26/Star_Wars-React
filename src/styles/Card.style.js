@@ -45,7 +45,7 @@ export const Picture = styled.div`
   }
 `;
 
-export const WrapperInformation = styled.h4`
+export const WrapperInformation = styled.div`
   font-size: 15px;
   margin: 0px auto;
   width: 700px;
@@ -56,8 +56,18 @@ export const WrapperInformation = styled.h4`
   box-shadow: 0px 8px 32px ${({ theme }) => theme.GlassShadow};
   border-radius: 10px 10px 10px 10px;
   backdrop-filter: blur(6px);
+  @media ${device.tablet} {
+    position: relative;
+    width: 90vw;
+    height: auto;
+    margin: 0 auto;
+  }
   p {
     margin: 20px;
     font-size: 20px;
+  }
+  a {
+    color: ${({ theme }) => theme.LoadingFont};
+    text-decoration: none;
   }
 `;
