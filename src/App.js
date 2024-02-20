@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'styles/GlobalStyle';
 import { colors } from 'styles/theme';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, HashRouter } from 'react-router-dom';
 import Layout from 'templates/Layout';
 import Home from 'pages/Home';
 import Films from 'pages/Films';
@@ -14,7 +14,7 @@ import SinglePlanet from 'pages/SinglePlanet';
 
 export const App = () => {
   return (
-    <Router>
+    <HashRouter>
       <ThemeProvider theme={colors}>
         <GlobalStyle />
         <Layout>
@@ -31,7 +31,7 @@ export const App = () => {
           </GlobalProvider>
         </Layout>
       </ThemeProvider>
-    </Router>
+    </HashRouter>
   );
 };
 
