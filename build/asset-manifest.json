@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.js": "/Star_Wars-React/static/js/main.ce505435.js",
+    "static/js/787.e5872aa2.chunk.js": "/Star_Wars-React/static/js/787.e5872aa2.chunk.js",
+    "static/media/episode_3.jpg": "/Star_Wars-React/static/media/episode_3.d32302d9d33b06b4f1c6.jpg",
+    "static/media/episode_1.jpg": "/Star_Wars-React/static/media/episode_1.3899b64329a2251a7ac6.jpg",
+    "static/media/r2d2.jpeg": "/Star_Wars-React/static/media/r2d2.d3d54ba431b3ab56aac8.jpeg",
+    "static/media/galaxyBlue.jpg": "/Star_Wars-React/static/media/galaxyBlue.3dda23bebe613dff70cf.jpg",
+    "static/media/OwenLars.jpg": "/Star_Wars-React/static/media/OwenLars.6ceefbfa19811a0b4daa.jpg",
+    "static/media/episode_2.jpg": "/Star_Wars-React/static/media/episode_2.a9f9361d6bd3275058ee.jpg",
+    "static/media/C3PO.jpg": "/Star_Wars-React/static/media/C3PO.c4250e7b274309e620c9.jpg",
+    "static/media/Obi-WanKenobi.jpg": "/Star_Wars-React/static/media/Obi-WanKenobi.8ebac11fbff3a0a14028.jpg",
+    "static/media/LukeSkywalker.jpeg": "/Star_Wars-React/static/media/LukeSkywalker.c3f9e4c27ce44d25a769.jpeg",
+    "static/media/episode_4.jpg": "/Star_Wars-React/static/media/episode_4.e3965a44773841ab9959.jpg",
+    "static/media/DaethVader.jpg": "/Star_Wars-React/static/media/DaethVader.954f53b56d612a440fe7.jpg",
+    "static/media/episode_6.jpg": "/Star_Wars-React/static/media/episode_6.4c6860cd7b39dd6b6693.jpg",
+    "static/media/episode_5.jpg": "/Star_Wars-React/static/media/episode_5.c21a004303d77debe917.jpg",
+    "static/media/BeruWhitesunlars.jpg": "/Star_Wars-React/static/media/BeruWhitesunlars.00978e90d70abccae8d4.jpg",
+    "static/media/LeiaOrgana.jpg": "/Star_Wars-React/static/media/LeiaOrgana.40c70b40fc7395cafc2f.jpg",
+    "index.html": "/Star_Wars-React/index.html",
+    "main.ce505435.js.map": "/Star_Wars-React/static/js/main.ce505435.js.map",
+    "787.e5872aa2.chunk.js.map": "/Star_Wars-React/static/js/787.e5872aa2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.ce505435.js"
+  ]
+}
